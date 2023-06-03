@@ -163,6 +163,13 @@ main>* {
     max-width: 20rem;
     min-width: 16rem;
     height: 32rem;
+    font-size: large;
+    filter: brightness(60%);
+    transition-duration: 1.2s;
+}
+
+.customCard:hover {
+    filter: brightness(100%);
 }
 
 .customCard>*:not(hr) {
@@ -171,8 +178,9 @@ main>* {
 
 .customCard img {
     /* padding: 1rem; */
-    max-width: 100%;
+    width: 100%;
     object-fit: cover;
+    object-position: top;
     height: 15rem;
     border-top-right-radius: 0.5rem;
     border-top-left-radius: 0.5rem;
@@ -183,6 +191,19 @@ main>* {
     font-size: larger;
     color: var(--main-light-green);
     justify-self: center;
+}
+
+.newItem::after {
+    /* border: 0.5rem solid red; */
+    content: "New!";
+    display: inline-block;
+    margin-left: 0.3rem;
+    vertical-align: top;
+    color: var(--main-purple);
+    background-color: var(--main-light-green);
+    border-radius: 0.2rem;
+    font-weight: bold;
+    font-size: 1rem;
 }
 
 footer {
